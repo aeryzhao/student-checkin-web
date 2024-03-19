@@ -1,0 +1,22 @@
+{
+  "name": "student-checkin",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vue/runtime-core": "^3.4.21",
+    "axios": "^1.6.8",
+    "element-plus": "^2.6.1",
+    "vue": "^3.4.21",
+    "vue-axios": "^3.5.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.1.6"
+  }
+}
