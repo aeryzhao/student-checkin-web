@@ -1,9 +1,8 @@
 <template>
-    <div>
-        <el-input v-model="name" style="width: 350px" placeholder="请输入学生姓名" />
+    <div class="date">
+        <el-input v-model="name" placeholder="请输入学生姓名" />
         <el-button type="primary" @click="addStudent">添加</el-button>
     </div>
-    <br>
     <div>
         <el-table :data="students" border style="width: 100%">
             <!-- <el-table-column prop="id" label="ID" width="180" /> -->
