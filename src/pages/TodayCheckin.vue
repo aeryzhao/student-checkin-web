@@ -1,24 +1,25 @@
 <template>
     <div>
-        <el-input v-model="name" style="width: 320px" placeholder="请输入学生姓名" />
+        <el-input v-model="name" style="width: 350px" placeholder="请输入学生姓名" />
         <el-button type="primary" @click="addStudent">添加</el-button>
     </div>
     <div>
         <el-table :data="students" border style="width: 100%">
             <!-- <el-table-column prop="id" label="ID" width="180" /> -->
             <el-table-column prop="name" label="姓名" width="180" />
-            <el-table-column prop="state" label="打卡" width="100">
+            <el-table-column prop="state" label="打卡" width="130">
                 <template #default="scope">
-                    <el-button type="success" :disabled='scope.row.state != 0'
+                    <el-button type="success" :disabled='scope.row.state == 1'
                         @click="check(scope.row, 1)">✅</el-button>
+                    <el-button type="danger" :disabled='scope.row.state == 2' @click="check(scope.row, 2)">❌</el-button>
                 </template>
             </el-table-column>
             <el-table-column label="操作" width="100">
                 <template #default="scope">
                     <el-popconfirm title="Are you sure to delete this student?" @confirm="deleteStudent(scope.row.id)">
                         <template #reference>
-                        <el-button type="danger">删除</el-button>
-                    </template>
+                            <el-button type="danger">删除</el-button>
+                        </template>
                     </el-popconfirm>
                 </template>
             </el-table-column>
